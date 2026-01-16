@@ -18,6 +18,9 @@ jobs:
           cd /root/dominikbauer004_django
 
           git remote set-url origin git@github.com:${{ github.repository }}.git
+
+          git reset --hard
+          git clean -fd
           
           git pull origin main
           source venv/bin/activate
